@@ -24,13 +24,13 @@
   <link href="css/landing-page.min.css" rel="stylesheet">
 
   <!-- rrweb -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.js"></script> -->
 
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rrweb-player@latest/dist/style.css"/>
   <script src="https://cdn.jsdelivr.net/npm/rrweb-player@latest/dist/index.js"></script> -->
 
-  <script src="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/record/rrweb-record.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/record/rrweb-record.min.js"></script>
 
   <script>
     let events = [];
@@ -46,7 +46,7 @@
     function save() {
       const body = JSON.stringify({ events });
       events = [];
-      fetch('http://localhost:3000/event', {
+      fetch('http://localhost:3000/tracking/event', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
@@ -56,8 +56,12 @@
       });
     }
 
-    // save events every 10 seconds
-    setInterval(save, 10 * 1000);
+    setInterval(save, 5 * 1000);
+  </script> -->
+
+  <script type="application/javascript" src="http://localhost:3000/record.js" ></script>
+  <script type="application/javascript">
+  window.recorder.setUser({ id: 'USER_ID', email: 'test@test.com', name: 'Bruno Luiz Silva' }).setMeta({ foo: 'bar' }).setClientId('client-id')
   </script>
   
 </head>
